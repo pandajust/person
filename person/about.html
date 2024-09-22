@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - [您的名字]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="https://gitee.com/gui-huijin" target="_blank">作品</a></li>
+                <li><a href="https://v.douyin.com/ikVkKJ2s/" target="_blank">抖音</a></li>
+                <li><a href="contact.html">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-me">
+            <h1>关于我</h1>
+            <div class="slideshow-container">
+                <img src="zp1.jpg" alt="照片1" class="slideshow-image fade">
+                <img src="zp2.jpg" alt="照片2" class="slideshow-image fade">
+                <img src="zp3.jpg" alt="照片3" class="slideshow-image fade">
+            </div>
+            <p>[详细的个人介绍，包括经历、教育背景、兴趣爱好等]</p>
+        </section>
+
+        <section class="skills">
+            <h2>技能</h2>
+            <!-- 这里可以添加技能图表或列表 -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 [您的名字]. 保留所有权利。</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slideshow-image");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000); // 每3秒切换一次图片
+        }
+    </script>
+</body>
+</html>

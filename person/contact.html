@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我 - [您的名字]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="https://gitee.com/gui-huijin" target="_blank">作品</a></li>
+                <li><a href="https://v.douyin.com/ikVkKJ2s/" target="_blank">抖音</a></li>
+                <li><a href="contact.html">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>联系我</h1>
+        <form id="contact-form" class="contact-form">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">邮箱：</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">消息：</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">发送</button>
+        </form>
+
+        <div id="form-result" class="form-result"></div>
+
+        <section class="social-media">
+            <h2>社交媒体</h2>
+            <!-- 添加社交媒体图标和链接 -->
+            <div class="wechat-qr">
+                <h3>微信二维码</h3>
+                <img src="zp5.jpg" alt="微信二维码" class="qr-code">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 [您的名字]. 保留所有权利。</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            
+            var result = '姓名: ' + name + '<br>邮箱: ' + email + '<br>消息: ' + message;
+            
+            document.getElementById('form-result').innerHTML = result;
+            
+            // 如果您想在控制台中查看数据，可以取消下面这行的注释
+            // console.log(result);
+            
+            // 清空表单
+            this.reset();
+        });
+    </script>
+</body>
+</html>
